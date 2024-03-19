@@ -4,7 +4,7 @@
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
 
 int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine, int nCmdShow) {
-	const char CLASS_NAME[] = "Sample Window Class";
+	const wchar_t CLASS_NAME[] = L"Sample Window Class";
 
 	WNDCLASS wc = { };
 
@@ -18,7 +18,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine,
 	HWND hwnd = CreateWindowEx(
 		0,                              // Optional window styles.
 		CLASS_NAME,                     // Window class
-		"Hello, World!",                // Window text
+		L"Hello, World!",                // Window text
 		WS_OVERLAPPEDWINDOW,            // Window style
 
 		// Size and position
