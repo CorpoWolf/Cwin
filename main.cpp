@@ -1,3 +1,6 @@
+#define UNICODE
+#define _UNICODE
+
 #include <windows.h>
 
 // Function declaration for the Window Procedure
