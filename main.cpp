@@ -6,6 +6,8 @@
 #include <d3dcompiler.h>
 #pragma comment(lib, "d3d11.lib")
 #pragma comment(lib, "D3DCompiler.lib")
+#pragma comment(lib, "user32.lib")
+#pragma comment(lib, "gdi32.lib")
 
 // Function declaration for the Window Procedure
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam);
@@ -27,10 +29,10 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine,
 
 	// Create the window.
 	HWND hwnd = CreateWindowEx(
-		0,                              // Optional window styles.
-		CLASS_NAME,                     // Window class
-		L"Hello, World!",                // Window text
-		WS_OVERLAPPEDWINDOW,            // Window style
+		0,                                // Optional window styles.
+		CLASS_NAME,                       // Window class
+		L"CorpoWolf's D3D11 Win32 Test",  // Window text
+		WS_OVERLAPPEDWINDOW,              // Window style
 
 		// Size and position
 		CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT, CW_USEDEFAULT,
