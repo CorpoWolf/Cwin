@@ -1,1 +1,1 @@
-clang -o test.exe main.cpp
+clang -o app.exe main.cpp

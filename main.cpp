@@ -51,8 +51,8 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR pCmdLine,
 
 	DXGI_SWAP_CHAIN_DESC sd = {0};
 	sd.BufferCount = 1;
-	sd.BufferDesc.Width = 800; // Use actual window size
-	sd.BufferDesc.Height = 600; // Use actual window size
+	sd.BufferDesc.Width = 1280; // Use actual window size
+	sd.BufferDesc.Height = 720; // Use actual window size
 	sd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
 	sd.BufferDesc.RefreshRate.Numerator = 60;
 	sd.BufferDesc.RefreshRate.Denominator = 1;
