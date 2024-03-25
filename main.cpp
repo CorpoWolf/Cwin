@@ -107,6 +107,18 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam) 
 			PostQuitMessage(0);
 			return 0;
 
+		case WM_KEYDOWN:
+			if (wParam == VK_F11) { // Toggle fullscreen
+				BOOL fullscreen;
+				g_pSwapChain->GetFullscreenState(&fullscreen, NULL);
+				g_pSwapChain->SetFullscreenState(!fullscreen, NULL);
+			}
+			else if (wParam == 'F') {
+				// Set title to F pressed.
+				SetWindowText(hwnd, L"F Pressed!");
+			}
+			break;
+
 		case WM_PAINT: {
 			// Clear the back buffer
 			float ClearColor[4] = {0.25f, 0.25f, 0.25f, 1.0f}; // RGBA

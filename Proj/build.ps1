@@ -1,0 +1,1 @@
+clang -o ./bin/app.exe main.cpp
